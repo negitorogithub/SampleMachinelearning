@@ -1,0 +1,68 @@
+<JudgeLabel@Label>
+    size_hint: (0.33, 0.2)
+    text: 'Label'
+    font_size: 100
+
+<MyWidget@BoxLayout>:
+    orientation: "vertical"
+    label1: label1Id.__self__
+    JudgeLabel:
+        id: label1Id
+
+<MyAllWidgets>:
+    cols: 3
+    rows: 2
+    judgeLabel1:judgeLabel1Id.__self__
+    judgeLabel2:judgeLabel2Id.__self__
+    judgeLabel3:judgeLabel3Id.__self__
+    judgeImage1:judgeImage1Id.__self__
+    judgeImage2:judgeImage2Id.__self__
+    judgeImage3:judgeImage3Id.__self__
+
+
+
+    Image:
+        id: judgeImage1Id
+        size_hint: (0.33, 0.2)
+
+    Image:
+        id: judgeImage2Id
+        size_hint: (0.33, 0.2)
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    Image:
+        id: judgeImage3Id
+        size_hint: (0.33, 0.2)
+    JudgeLabel:
+        text: "LA1"
+        id: judgeLabel1Id
+        color: 1,1,1,1
+
+    JudgeLabel:
+        text: "LA2"
+        id: judgeLabel2Id
+        color: 0,0,0,1
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    JudgeLabel:
+        text: "LA3"
+        id: judgeLabel3Id
+        color: 1,1,1,1
+
+
+
+
+
+
+
+
+
+
